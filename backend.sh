@@ -1,6 +1,7 @@
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
 dnf install nodejs -y
+dnf install mysql -y
 useradd expense
 cp /etc/systemd/system/backend.service
 mkdir /app
@@ -12,5 +13,4 @@ npm install
 systemctl daemon-reload
 systemctl enable backend
 systemctl start backend
-dnf install mysql -y
 mysql -h mysql-dev.bharathgaveni.online -uroot -pExpenseApp@1 < /app/schema/backend.sql
