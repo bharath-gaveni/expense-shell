@@ -3,8 +3,6 @@ clour="\e[36m"
 echo -e "${clour} installing nginx \e[0m"
 dnf install nginx -y &>>$log_file
 echo $?
-
-
 echo -e "${clour} enabling nginx \e[0m"
 systemctl enable nginx &>>$log_file
 echo $?
@@ -20,7 +18,6 @@ echo $?
 echo -e "${clour} dowloading frontend application content \e[0m"
 curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip &>>$log_file
 echo $?
-
 echo -e "${clour} changing location \e[0m"
 cd /usr/share/nginx/html &>>$log_file
 echo $?
