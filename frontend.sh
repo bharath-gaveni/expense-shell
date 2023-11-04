@@ -21,7 +21,7 @@ echo $?
 echo -e "${clour} changing location \e[0m"
 cd /usr/share/nginx/html &>>$log_file
 echo $?
-echo -e "${clour} unzipping the content in temporary file \e[0m"
+echo -e "${clour} unzipping the content in app directory \e[0m"
 unzip /tmp/frontend.zip &>>$log_file
 echo $?
 echo -e "${clour} restarting the nginx  \e[0m"
