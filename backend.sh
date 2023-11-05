@@ -46,7 +46,7 @@ if [ $? -eq 0 ]; then
 else
   echo -e "\e[31m FAILURE \e[0m"
 fi
-if [ -d /app ]; then
+if [ ! -d /app ]; then
 echo -e "${clour} making a directory for application content to store \e[0m"
 mkdir /app &>>log_file
 if [ $? -eq 0 ]; then
