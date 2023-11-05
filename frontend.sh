@@ -2,7 +2,11 @@ log_file="/tmp/expense.log"
 clour="\e[36m"
 echo -e "${clour} installing nginx \e[0m"
 dnf install nginx -y &>>$log_file
-echo $?
+if ( $? -eq 0 ); then
+  echo -e "\e[32m Success \e[0m"
+else
+    echo -e "e[31m Failure \e[0m"
+fi
 echo -e "${clour} enabling nginx \e[0m"
 systemctl enable nginx &>>$log_file
 echo $?
