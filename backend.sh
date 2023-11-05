@@ -30,7 +30,7 @@ else
   echo -e "\e[31m FAILURE \e[0m"
 fi
 id expense &>>log_file
-if [ $? -ne 0]; then
+if [ $? -ne 0 ]; then
 echo -e "${clour} adding user \e[0m"
 useradd expense &>>log_file
     if [ $? -eq 0 ]; then
