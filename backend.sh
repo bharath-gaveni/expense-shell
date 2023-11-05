@@ -118,7 +118,7 @@ else
   echo -e "\e[31m FAILURE \e[0m"
 fi
 echo -e "${clour} loading schema to mysql client \e[0m"
-mysql -h mysql-dev.bharathgaveni.online -uroot -p$[MY_SQL_ROOT_PASSWORD] < /app/schema/backend.sql &>>log_file
+mysql -h mysql-dev.bharathgaveni.online -uroot -p${MY_SQL_ROOT_PASSWORD} < /app/schema/backend.sql &>>log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32m SUCCESS \e[0m"
 else
