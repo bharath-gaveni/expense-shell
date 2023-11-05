@@ -38,6 +38,7 @@ if [ $? -eq 0 ]; then
 else
   echo -e "\e[31m FAILURE \e[0m"
 fi
+fi
 echo -e "${clour} copying backend service file \e[0m"
 cp backend.service /etc/systemd/system/backend.service &>>log_file
 if [ $? -eq 0 ]; then
