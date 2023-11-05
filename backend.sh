@@ -46,12 +46,14 @@ if [ $? -eq 0 ]; then
 else
   echo -e "\e[31m FAILURE \e[0m"
 fi
+if [ ! -d /app ]; then
 echo -e "${clour} making a directory for application content to store \e[0m"
 mkdir /app &>>log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32m SUCCESS \e[0m"
 else
   echo -e "\e[31m FAILURE \e[0m"
+fi
 fi
 echo -e "${clour} removing old application content in app directory and it is free \e[0m"
 rm -rf /app/* &>>log_file
