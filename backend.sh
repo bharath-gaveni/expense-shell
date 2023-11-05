@@ -33,11 +33,11 @@ id expense &>>log_file
 if [ $? -ne 0]; then
 echo -e "${clour} adding user \e[0m"
 useradd expense &>>log_file
-if [ $? -eq 0 ]; then
-  echo -e "\e[32m SUCCESS \e[0m"
-else
-  echo -e "\e[31m FAILURE \e[0m"
-fi
+    if [ $? -eq 0 ]; then
+      echo -e "\e[32m SUCCESS \e[0m"
+    else
+      echo -e "\e[31m FAILURE \e[0m"
+    fi
 fi
 echo -e "${clour} copying backend service file \e[0m"
 cp backend.service /etc/systemd/system/backend.service &>>log_file
