@@ -1,7 +1,11 @@
 
 log_file="/tmp/expense.log"
 clour="\e[36m"
-MY_SQL_ROOT_PASSWORD=$1
+if [ -z "$1" ]; then
+  echo provide password
+  exit
+fi
+MY_SQL_ROOT_PASSWORD="$1"
 echo -e "${clour} disable nodejs \e[0m"
 dnf module disable nodejs -y &>>log_file
 if [ $? -eq 0 ]; then
