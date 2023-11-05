@@ -5,7 +5,7 @@ dnf install nginx -y &>>$log_file
 if ( $? -eq 0 ); then
  echo -e "\e[32m Success \e[0m"
 else
-  echo -e "e[31m Failure \e[0m"
+  echo -e "\e[31m Failure \e[0m"
 fi
 echo -e "${clour} enabling nginx \e[0m"
 systemctl enable nginx &>>$log_file
