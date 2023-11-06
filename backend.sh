@@ -1,6 +1,4 @@
 source common.sh
-log_file="/tmp/expense.log"
-clour="\e[36m"
 if [ -z "$1" ]; then
   echo provide password
   exit
