@@ -6,3 +6,8 @@ while [ "$a" -gt 0 ]; do
 done
 
 
+for dakati in bharath kumar gaveni; do
+  echo dakati is - $dakati
+  sleep 1
+done
+
