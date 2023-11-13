@@ -2,12 +2,6 @@ source common.sh
 echo -e "${clour} installing nginx \e[0m"
 dnf install nginx -y &>>$log_file
 status_check
-echo -e "${clour} enabling nginx \e[0m"
-systemctl enable nginx &>>$log_file
-status_check
-echo -e "${clour} starting nginx \e[0m"
-systemctl start nginx &>>$log_file
-status_check
 echo -e "${clour} coping expense.conf file \e[0m"
 cp expense.conf /etc/nginx/default.d/expense.conf &>>$log_file
 status_check
@@ -25,4 +19,5 @@ unzip /tmp/frontend.zip &>>$log_file
 status_check
 echo -e "${clour} restarting the nginx  \e[0m"
 systemctl restart nginx &>>$log_file
+systemctl enable nginx &>>$log_file
 status_check
