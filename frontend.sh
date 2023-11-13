@@ -8,7 +8,7 @@ status_check
 echo -e "${clour} removing content in nginx file \e[0m"
 rm -rf /usr/share/nginx/html/* &>>$log_file
 status_check
-echo -e "${clour} dowloading frontend application content \e[0m"
+echo -e "${clour} downloading frontend application content \e[0m"
 curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip &>>$log_file
 status_check
 echo -e "${clour} changing location \e[0m"
