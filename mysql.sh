@@ -3,7 +3,7 @@ if [ -z "$1" ]; then
   echo provide password
   exit
 fi
-MY_SQL_ROOT_PASSWORD="$1"
+MY_SQL_ROOT_PASSWORD="$1" #(first variable input in runtime of script)
 echo -e "${clour} disable mysql \e[0m"
 dnf module disable mysql -y &>>log_file
 status_check
