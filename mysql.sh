@@ -16,7 +16,7 @@ status_check
 echo -e "${clour} enabling mysqld \e[0m"
 systemctl enable mysqld &>>log_file
 status_check
-echo -e "${clour} stsrting mysqld \e[0m"
+echo -e "${clour} starting mysqld \e[0m"
 systemctl start mysqld &>>log_file
 status_check
 echo -e "${clour} setting up the password for mysql \e[0m"
