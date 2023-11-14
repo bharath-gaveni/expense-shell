@@ -50,7 +50,7 @@ status_check
 echo -e "${clour} dowloading dependencies for nodejs software \e[0m"
 npm install &>>log_file
 status_check
-echo -e "${clour} reloading and starting the nodejs  \e[0m"
+echo -e "${clour} reloading and starting the backend  \e[0m"
 systemctl daemon-reload &>>log_file
 status_check
 systemctl enable backend &>>log_file
